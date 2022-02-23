@@ -18,7 +18,7 @@ def calc_digits_sum(digits):
 
 
 """Fill list with values"""
-for number in range(1,51,2):
+for number in range(1,1001,2):
     number = pow(number, 3)  # power into third
     digits.append(split_number(number))
 
