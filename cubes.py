@@ -19,7 +19,7 @@ def calc_digits_sum(digits):
 
 """Fill list with values"""
 for number in range(1,1001,2):
-    number = pow(number, 3)  # power into third
+    number = pow(number, 3)  # raise to the third power
     digits.append(split_number(number))
 
 print("Initial cubes list is ", digits)
@@ -28,14 +28,12 @@ print("Initial cubes list is ", digits)
 for number in digits:
     digits_sum = calc_digits_sum(number)
     if digits_sum % 7 == 0:
-        print(str(join_number(number)) + " = " + str(digits_sum))
         response += join_number(number)
 
-print(f"response: {response}")
+print(f"First sum: {response}")
 
 """Reset response"""
 response = 0
-
 
 """ Fill response with (values + 17) which digits sum is exactly dividing by 7"""
 for number in digits:
@@ -43,7 +41,6 @@ for number in digits:
     number = split_number(number)
     digits_sum = calc_digits_sum(number)
     if digits_sum % 7 == 0:
-        print(str(join_number(number)) + " = " + str(digits_sum))
         response += join_number(number)
 
-print(f"response: {response}")
+print(f"Second sum: {response}")
